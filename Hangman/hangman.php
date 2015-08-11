@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/unirest-php/src/Unirest.php');
+require_once(__DIR__.'/Unirest.php');
 $difficulty = $_POST['difficulty'];
 getNewWord();
 
