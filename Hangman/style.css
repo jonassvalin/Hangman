@@ -1,1 +1,9 @@
-@CHARSET "UTF-8";
+body {
+	color: red;
+    background: lightblue;
+}
+
+h1 {
+    color: red;
+    margin-left: 20px;
+}
