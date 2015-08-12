@@ -50,6 +50,18 @@ function retrieveRandomWord($url) {
 			)
 	);
 	$wordJSON = json_decode($response->raw_body);
+	$word = $wordJSON->{"word"};
+	
+	/*
+	 * The API provides some weird words (if you can even call them that) like "dr. j" which I don't think should be included.
+	 * If such a word is provided, the function instead calls itself recursively to get a new word.
+	 */
+	
+	if (strpos($word,'.') !== false || strpos($word,' ') !== false) {
+		return retrieveRandomWord($url);
+	} else {
+		return $wordJSON->{"word"};
+	}
 	
 	/*Loose idea for discarding words with too low frequency. API seems to be broken however, 
 	 * sometimes the frequency parameter doesn't exist, unsure of the cause.
@@ -59,7 +71,6 @@ function retrieveRandomWord($url) {
 	if ($freq > 3.5) return $wordJSON->{"word"};
 	else return retrieveRandomWord($url);
 	*/
-	return $wordJSON->{"word"};
 }
 
 function setSessionVariables($word) {
