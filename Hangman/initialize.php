@@ -14,7 +14,7 @@ setSessionVariables($randomWord);
 initGraphics($randomWord);
 
 /**
- * Defines the URL that is used by the Words API based on the difficulty setting.
+ * Defines the URL to call the Words API based on the difficulty setting.
  * @param unknown $difficulty
  * @param unknown $url
  */
@@ -58,19 +58,20 @@ function retrieveRandomWord($url) {
 	 */
 	
 	if (strpos($word,'.') !== false || strpos($word,' ') !== false) {
+		echo "Skipping " . $word;
 		return retrieveRandomWord($url);
 	} else {
 		return $wordJSON->{"word"};
 	}
 	
 	/*Loose idea for discarding words with too low frequency. API seems to be broken however, 
-	 * sometimes the frequency parameter doesn't exist, unsure of the cause.
+	 * sometimes the frequency parameter doesn't exist, unsure of the cause (nothing stated in docs).
 	 * 
 	 * 
-	$freq = $wordJSON->{"frequency"};
-	if ($freq > 3.5) return $wordJSON->{"word"};
-	else return retrieveRandomWord($url);
-	*/
+	 * $freq = $wordJSON->{"frequency"};
+	 * if ($freq > 3.5) return $wordJSON->{"word"};
+	 * else return retrieveRandomWord($url);
+	 */
 }
 
 function setSessionVariables($word) {

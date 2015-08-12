@@ -1,13 +1,7 @@
 <html>
 <head>
 <title>Duke Hangem' 3D</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-body {
-	color: red;
-    background: black;
-}
-</style>
+<link href="/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h1>Duke Hangem' 3D</h1>
@@ -22,6 +16,5 @@ body {
 	Start New Game:
 	<input type="submit" name="newgame" value="Go!">
 </form>
-
 </body>
 </html>

@@ -32,7 +32,7 @@ function checkStatus($failedAttempts, $word, $wordLength) {
 	
 	if($allCorrect) {
 		restartGame("You Win!", $word, $failedAttempts);
-	} else if ($failedAttempts > 7) {
+	} else if ($failedAttempts > 9) {
 		restartGame("You Lose!", $word, $failedAttempts);
 	}
 	
