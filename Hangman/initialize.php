@@ -58,7 +58,6 @@ function retrieveRandomWord($url) {
 	 */
 	
 	if (strpos($word,'.') !== false || strpos($word,' ') !== false) {
-		echo "Skipping " . $word;
 		return retrieveRandomWord($url);
 	} else {
 		return $wordJSON->{"word"};
