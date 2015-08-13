@@ -63,7 +63,7 @@ function updateGraphics($failedAttempts, $word, $wordLength) {
 	}
 	echo '
 		<form action="update.php" method="POST"><br>
-		Guess: <input type="text" name="guess" pattern=".{1,1}"   required title="1 characters minimum"><br><br>
+		Guess: <input type="text" name="guess" pattern="[a-z]{1,1}"  required title="Use only lower case letters"><br><br>
 		<input type="submit" name="update" value="Submit Guess!"><br><br>
 			Used characters:
 		';
