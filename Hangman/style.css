@@ -1,9 +1,24 @@
 body {
+	background-color: grey;
 	color: red;
-    background: black;
+	text-align: center;
 }
 
-h1 {
-    color: red;
-    margin-left: 20px;
+#container {
+	background-color: #EEE;
+	width: 400;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content {
+	padding: 10px;
+}
+
+#header {
+	background-color: black;
+}
+
+#footer {
+	background-color: black;
 }
