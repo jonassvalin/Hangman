@@ -102,7 +102,7 @@ function initGraphics($word) {
 	}
 	echo '
 	<form action="update.php" method="POST"><br>
-	Guess: <input type="text" name="guess" maxlength="1"><br><br>
+	Guess: <input type="text" name="guess" pattern=".{1,1}"   required title="1 characters minimum"><br><br>
 	<input type="submit" name="update" value="Submit Guess!"><br><br>
 	Used characters:
 	';
